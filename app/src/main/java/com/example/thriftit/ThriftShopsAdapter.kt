@@ -36,7 +36,7 @@ class ThriftShopsAdapter (private val data: MutableList<ThriftShop>, private val
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val ItemsViewModel = data[position]
-        Picasso.get().load("https://icons.iconarchive.com/icons/designbolts/free-male-avatars/128/Male-Avatar-Mustache-icon.png").placeholder(R.drawable.ic_launcher_background).error(R.drawable.ic_launcher_background).into(holder.imageView);
+        Picasso.get().load("https://iconarchive.com/show/business-economic-icons-by-inipagi/store-icon.html").placeholder(R.drawable.ic_launcher_background).error(R.drawable.ic_launcher_background).into(holder.imageView);
         // sets the text to the textview from our itemHolder class
         Timber.d("MM onBindViewHolder ${data.size}")
         holder.thriftShopName.text = ItemsViewModel.name

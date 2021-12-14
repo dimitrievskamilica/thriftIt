@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">ThriftIt</string>
+    <string name="app_introduction">Welcome to ThriftIt! For more information about the application click on the button About. To see the list of Thrift Shops click on the button Show. To add your own thrift shop click on the button Add</string>
+    <string name="button_about">About</string>
+    <string name="button_show">Show</string>
+    <string name="button_add">Add</string>
+    <string name="button_back">Back</string>
+    <string name="button_exit">Exit</string>
+    <string name="text_view_name">Name of Thrift Shop</string>
+    <string name="text_view_street">Street</string>
+    <string name="text_view_street_number">Street number</string>
+    <string name="text_view_name_hint">Goodwill</string>
+    <string name="text_view_street_hint">Smetanova</string>
+    <string name="text_view_street_number_hint">33</string>
 </resources>

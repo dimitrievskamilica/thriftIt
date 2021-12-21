@@ -35,7 +35,7 @@ class ShowThriftShopsActivity : AppCompatActivity() {
 
                         }
                     }
-                    //app.saveData()
+                    app.saveData()
                     adapter.notifyItemChanged(pos)
                 }
             }
@@ -64,7 +64,7 @@ class ShowThriftShopsActivity : AppCompatActivity() {
                     app.thriftShops.remove(app.thriftShops[pos])
                     adapter.notifyItemRemoved(pos)
                     setResult(RESULT_OK, data)
-                   // app.saveData()
+                    app.saveData()
                 }
                 builder.setNeutralButton("Cancel") { dialogInterface, which -> //performing cancel action
                     Toast.makeText(

@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
                 data.getIntExtra("streetNumber",1)
             )
             )
-           // app.saveData()
+            app.saveData()
            // Log.i("MainActivityAdd",app.data.guests.last().toString())
 
         }

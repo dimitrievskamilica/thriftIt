@@ -12,4 +12,12 @@
     <string name="text_view_name_hint">Goodwill</string>
     <string name="text_view_street_hint">Smetanova</string>
     <string name="text_view_street_number_hint">33</string>
+    <string name="text_view_name_of_app">Name</string>
+    <string name="text_view_description">Description</string>
+    <string name="text_view_description_of_app">ThriftIt is an application that you can use to find the best thrift shops around you. You can see what they offer and you can get notifications of sales at thrift shops</string>
+    <string name="text_view_author">Author</string>
+    <string name="text_view_author_name">Milica Dimitrievska</string>
+    <string name="text_view_version">Version</string>
+    <string name="text_view_app_version">1.0</string>
+    <string name="text_view_UUID">UUID</string>
 </resources>

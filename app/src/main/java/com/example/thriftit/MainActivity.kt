@@ -31,7 +31,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun about(view: android.view.View) {
-
+        val intent = Intent(this,AboutActivity::class.java)
+        startActivity(intent)
     }
     fun AddThriftShop(view: android.view.View) {
         val intent = Intent(this,AddThriftShopActivity::class.java)

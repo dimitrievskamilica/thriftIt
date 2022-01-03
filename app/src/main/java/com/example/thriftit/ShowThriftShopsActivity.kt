@@ -24,6 +24,7 @@ class ShowThriftShopsActivity : AppCompatActivity() {
                     val name = data.getStringExtra("name")
                     val street = data.getStringExtra("street")
                     val streetNumber = data.getIntExtra("streetNumber",0)
+                    val sale = data.getBooleanExtra("sale",false)
                     val pos = data.getIntExtra("position", -1)
 
                     if (name != null && street != null ) {
@@ -31,7 +32,7 @@ class ShowThriftShopsActivity : AppCompatActivity() {
                             app.thriftShops[pos].name = name
                             app.thriftShops[pos].street = street
                             app.thriftShops[pos].streetNumber = streetNumber.toInt()
-
+                            app.thriftShops[pos].sale=sale
 
                         }
                     }

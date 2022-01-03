@@ -23,6 +23,7 @@ class AddThriftShopActivity : AppCompatActivity() {
                 binding.editTextName.setText(app.thriftShops[pos].name)
                 binding.editTextStreet.setText(app.thriftShops[pos].street)
                 binding.editTextStreetNumber.setText(app.thriftShops[pos].streetNumber.toString())
+                binding.checkBox.isChecked = app.thriftShops[pos].sale
                 binding.buttonAdd.setTextKeepState("Update")
             }
 
@@ -37,6 +38,11 @@ class AddThriftShopActivity : AppCompatActivity() {
         intent.putExtra("name",binding.editTextName.text.toString())
         intent.putExtra("street",binding.editTextStreet.text.toString())
         intent.putExtra("streetNumber",binding.editTextStreetNumber.text.toString().toInt())
+        if(binding.checkBox.isChecked){
+            intent.putExtra("sale",true)
+        }else{
+            intent.putExtra("sale",false)
+        }
 
         if(pos!=-1) {
             intent.putExtra("position", pos.toString().toInt())

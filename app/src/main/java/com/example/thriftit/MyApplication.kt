@@ -24,7 +24,9 @@ class MyApplication: Application() {
         super.onCreate()
         sharedPref = getSharedPreferences(MY_SP_FILE_NAME, Context.MODE_PRIVATE)
         thriftShops = mutableListOf<ThriftShop>()
-        //thriftShops.add(ThriftShop("GoodWill","Smetanova",33))
+        //thriftShops.add(ThriftShop("GoodWill","Smetanova",33,true))
+        //thriftShops.add(ThriftShop("Wish","Smetanova",31,false))
+        //thriftShops.add(ThriftShop("BetterWorld","Smetanova",23,true))
         gson = Gson()
         file = File(filesDir, MY_FILE_NAME)
         if (!containsID()) {

@@ -1,5 +1,6 @@
 package com.example.thriftit
 
+import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,7 +37,7 @@ class ThriftShopsAdapter (private val data: MutableList<ThriftShop>, private val
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val ItemsViewModel = data[position]
-        Picasso.get().load("https://iconarchive.com/show/business-economic-icons-by-inipagi/store-icon.html").placeholder(R.drawable.ic_launcher_background).error(R.drawable.ic_launcher_background).into(holder.imageView);
+        holder.imageView.setImageResource(R.drawable.ic_baseline_shopping_bag_24)
         // sets the text to the textview from our itemHolder class
         Timber.d("MM onBindViewHolder ${data.size}")
         holder.thriftShopName.text = ItemsViewModel.name

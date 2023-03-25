@@ -6,12 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".ShowThriftShopsActivity">
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="253dp"
+        android:layout_height="319dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAddActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.875" />
+
+    <Button
+        android:id="@+id/buttonAddActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="44dp"
+        android:onClick="AddThriftShop"
+        android:text="@string/button_add"
+        app:backgroundTint="#F17CA4"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="415dp"
+        android:layout_height="157dp"
+        android:scaleType="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/clothes" />
 </androidx.constraintlayout.widget.ConstraintLayout>

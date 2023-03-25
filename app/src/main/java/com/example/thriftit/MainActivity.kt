@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var builder: Notification.Builder
     private var channelId = 10000
     private val description = "Sale Notification"
-    val resultContract = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result ->
+    /*val resultContract = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result ->
         if (result.resultCode == Activity.RESULT_OK) {
             val data: Intent? = result.data
             app.thriftShops.add( ThriftShop(
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-    }
+    }*/
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -80,10 +80,10 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this,AboutActivity::class.java)
         startActivity(intent)
     }
-    fun AddThriftShop(view: android.view.View) {
+    /*fun AddThriftShop(view: android.view.View) {
         val intent = Intent(this,AddThriftShopActivity::class.java)
         resultContract.launch(intent)
-    }
+    }*/
     fun showThriftShops(view: android.view.View) {
         val intent = Intent(this,ShowThriftShopsActivity::class.java)
         startActivity(intent)

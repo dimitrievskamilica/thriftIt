@@ -41,6 +41,23 @@ class ShowThriftShopsActivity : AppCompatActivity() {
                 }
             }
         }
+    val resultContract = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val data: Intent? = result.data
+            app.thriftShops.add( ThriftShop(
+                data?.getStringExtra("name")!!,
+                data.getStringExtra("street")!!,
+                data.getIntExtra("streetNumber",1),
+                data.getBooleanExtra("sale",false)
+            )
+            )
+            app.saveData()
+            adapter.notifyItemInserted(app.thriftShops.size -1)
+            // Log.i("MainActivityAdd",app.data.guests.last().toString())
+
+        }
+
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_thrift_shops)
@@ -98,5 +115,9 @@ class ShowThriftShopsActivity : AppCompatActivity() {
         binding.recyclerView.adapter = adapter
         //adapter.notifyDataSetChanged();
         //Timber.d("Items ${app.data.guests.size}")
+    }
+    fun AddThriftShop(view: android.view.View) {
+        val intent = Intent(this,AddThriftShopActivity::class.java)
+        resultContract.launch(intent)
     }
 }

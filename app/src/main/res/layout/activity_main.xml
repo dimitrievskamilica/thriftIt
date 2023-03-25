@@ -36,7 +36,7 @@
         android:id="@+id/buttonAbout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="36dp"
         android:layout_marginBottom="48dp"
         android:onClick="about"
         android:text="@string/button_about"
@@ -55,18 +55,6 @@
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
-    <Button
-        android:id="@+id/buttonAddActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:onClick="AddThriftShop"
-        android:text="@string/button_add"
-        app:backgroundTint="#F17CA4"
-        app:layout_constraintBottom_toTopOf="@+id/buttonExit"
-        app:layout_constraintEnd_toStartOf="@+id/buttonAbout"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintStart_toEndOf="@+id/buttonShow" />
 
     <Button
         android:id="@+id/buttonShow"
@@ -75,9 +63,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginBottom="48dp"
         android:onClick="showThriftShops"
-        android:text="@string/button_show"
+        android:text="thrift shops"
         app:backgroundTint="#F17CA4"
         app:layout_constraintBottom_toTopOf="@+id/buttonExit"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAbout"
+        app:layout_constraintHorizontal_bias="0.186"
         app:layout_constraintStart_toStartOf="@+id/guideline4" />
 
     <TextView
